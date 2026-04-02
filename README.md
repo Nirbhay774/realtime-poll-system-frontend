@@ -1,52 +1,68 @@
-# Real-Time Poll System Frontend
+# ✨ Poll Studio - Frontend
 
-A modern, responsive frontend for the Real-Time Poll Application, built with Next.js 14 and Tailwind CSS.
+A high-fidelity, real-time polling interface built with **Next.js 14**, **Tailwind CSS**, and **TypeScript**.
 
-## 🚀 Tech Stack
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Language**: TypeScript
-- **State Management**: React Hooks & Context
-- **Notifications**: React Hot Toast
-- **Testing**: Vitest & React Testing Library
+[![Deploy with Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render)](https://render.com)
+[![Next.js 14](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
 
-## ✨ Features
-- **Real-time Updates**: Live poll results using WebSockets.
-- **Poll Creation**: Easy interface to create new polls with multiple options.
-- **Interactive Voting**: Seamless voting experience.
-- **Responsive Design**: Optimized for both desktop and mobile devices.
-- **Feature Documentation**: Dedicated page explaining the application's capabilities.
+## 🎨 Premium UI & Design
 
-## 🛠️ Setup & Installation
+The frontend follows a "Glassmorphism" aesthetic:
+- **Radial Gradients**: Dynamic background colors using `radial-gradient`.
+- **Blur Effects**: `backdrop-blur` on headers and cards for a depth feel.
+- **Micro-Animations**: Smooth hover transitions and loading states.
+- **Typography**: Clean, sans-serif font system (Geist) with premium weights.
 
-1. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+---
 
-2. **Configure Environment Variables**:
-   Create a `.env.local` file in the frontend directory:
-   ```env
-   NEXT_PUBLIC_BACKEND_URL=https://your-backend-url.onrender.com
-   NEXT_PUBLIC_WS_URL=wss://your-backend-url.onrender.com
-   ```
+## ⚡ Key Features
 
-3. **Running the Application**:
-   - **Development**: `npm run dev`
-   - **Build**: `npm run build`
-   - **Production**: `npm start`
+- **Live Data Streaming**: Real-time poll progress with WebSockets.
+- **Atomic Components**: Reusable, well-structured UI primitives.
+- **Smart Routing**: Support for auth-protected routes (`/create`) and public voting (`/poll/:id`).
+- **Responsive Layout**: Fluid design that handles everything from mobile to ultrawide.
+- **Optimized Performance**: Next.js 14 App Router for fast initial loads.
 
-4. **Linting & Testing**:
-   - `npm run lint`
-   - `npm test`
+---
 
-## 🌐 Deployment (Render)
+## 🛠️ Getting Started
 
-To deploy this frontend on Render, use the following configuration:
+### 1. **Clone & Install**
+```bash
+git clone https://github.com/Nirbhay774/realtime-poll-system-frontend.git
+cd realtime-poll-system-frontend
+npm install
+```
 
-- **Service Type**: Web Service
-- **Build Command**: `npm install && npm run build`
-- **Start Command**: `npm start`
-- **Environment Variables**:
-  - `NEXT_PUBLIC_BACKEND_URL`: The URL of your deployed backend.
-  - `NEXT_PUBLIC_WS_URL`: The WebSocket URL of your deployed backend (e.g., `wss://your-backend.onrender.com`).
+### 2. **Environment Setup**
+Create `.env.local`:
+```env
+NEXT_PUBLIC_BACKEND_URL=https://your-backend.onrender.com
+NEXT_PUBLIC_WS_URL=wss://your-backend.onrender.com
+```
+
+### 3. **Run Locally**
+```bash
+npm run dev
+```
+
+---
+
+## 🚀 Deployment (Static & Web)
+
+The application is optimized for modern hosting:
+- **Web Service (Recommended)**: Use `npm run build` and `npm start`.
+- **Static Hosting**: Includes `_redirects` and `vercel.json` for seamless SPA routing.
+
+## 🧬 Frontend Architecture
+```mermaid
+graph LR
+    A[App Router] --> B[Layouts]
+    B --> C[Pages]
+    C --> D[Components]
+    D --> E[Hooks]
+    E --> F[Services]
+```
+
+## 📜 License
+MIT License - Developed by [Nirbhay](https://github.com/Nirbhay774)
